@@ -13,13 +13,20 @@
     --palette-accent2: #f08;
     --palette-accent3: #e48;
     --palette-base0: #232629;
+    --MiniBasepalette-base0: #293b4d;
     --palette-base1: #2d3136;
     --palette-base2: #31363b;
     --palette-base3: #4d5057;
     --palette-base4: #616569;
     --palette-base5: #eff0f1;
     --palette-secondary0: #345e75;
-    --palette-secondary1: #3daee9;
+    --palette-secondaryI: #e64b09;
+    --palette-secondaryJ: #b9d11c;
+    --palette-secondaryL: #6bc835;
+    --palette-secondaryO: #11cad7;
+    --palette-secondaryS: #6248c0;
+    --palette-secondaryT: #b74973;
+    --palette-secondaryZ: #ec92a4;
 
     --grid-background: #1143c4;
 }
@@ -67,14 +74,24 @@ header h1
     margin: 0;
 }
 
+h2{
+    text-align: center;
+    margin:auto;
+    padding:1rem;
+}
+
 aside
 {
-    background: var(--palette-base1);
+    background: var(--palette-base0);
     height: calc(100% - var(--header-height) - var(--footer-height));
     /* max-width: var(--sidebar-max-width); */
     position: absolute;
     top: var(--header-height);
     width: var(--sidebar-width);
+}
+
+.hold-aside{
+    left: calc(100% - var(--sidebar-width));
 }
 
 main
@@ -84,7 +101,7 @@ main
     left: var(--sidebar-width);
     position: absolute;
     top: var(--header-height);
-    width: calc(100% - var(--sidebar-width));
+    width: calc(100% - var(--sidebar-width)*2);
 }
 
 footer
@@ -95,6 +112,29 @@ footer
     padding: 0.5em;
     position: absolute;
     width: 100%;
+}
+
+.holdGrid
+{
+    aspect-ratio: var(--grid-aspect);
+    background: var(--MiniBasepalette-base0);
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    position: relative;
+    max-width: 100%;
+}
+.nextGrid
+{
+    aspect-ratio: var(--grid-aspect);
+    background: var(--MiniBasepalette-base0);
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    position: relative;
+    max-width: 100%;
 }
 
 .grid
@@ -138,37 +178,37 @@ footer
 
 .cell.I
 {
-    background-color: var(--palette-secondary1);
+    background-color: var(--palette-secondaryI);
 }
 
 .cell.J
 {
-    background-color: var(--palette-secondary1);
+    background-color: var(--palette-secondaryJ);
 }
 
 .cell.L
 {
-    background-color: var(--palette-secondary1);
+    background-color: var(--palette-secondaryL);
 }
 
 .cell.O
 {
-    background-color: var(--palette-secondary1);
+    background-color: var(--palette-secondaryO);
 }
 
 .cell.S
 {
-    background-color: var(--palette-secondary1);
+    background-color: var(--palette-secondaryS);
 }
 
 .cell.T
 {
-    background-color: var(--palette-secondary1);
+    background-color: var(--palette-secondaryT);
 }
 
 .cell.Z
 {
-    background-color: var(--palette-secondary1);
+    background-color: var(--palette-secondaryZ);
 }
 
 .cell.current
